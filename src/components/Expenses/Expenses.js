@@ -28,6 +28,7 @@ const Expenses = (props) => {
 
   return (
     <div>
+      <h3>stage test</h3>
       <Card className='expenses'>
         <ExpensesFilter
           selected={filteredYear}
