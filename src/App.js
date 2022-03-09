@@ -44,6 +44,7 @@ const App = () => {
   return (
     <div>
       <h2>GitHub Test</h2>
+      <h3>stage test</h3>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
