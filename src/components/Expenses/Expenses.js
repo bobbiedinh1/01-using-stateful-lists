@@ -12,6 +12,20 @@ const Expenses = (props) => {
     setFilteredYear(selectedYear);
   };
 
+  const filteredExpenses = props.items.filter((expense) =>
+      expense.date.getFullYear().toString() === filteredYear
+)
+
+// const filteredExpenses = props.items.filter((expense) =>
+//       {
+//         console.log("hi")
+//         //found out that you must return then have the ( on same line otherwise u get an error.
+//         return (
+//           expense.date.getFullYear().toString() === filteredYear
+//         )
+//       }
+//   )
+
   return (
     <div>
       <Card className='expenses'>
@@ -19,7 +33,7 @@ const Expenses = (props) => {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {props.items.map((expense) => (
+        {filteredExpenses.map((expense) => (
           <ExpenseItem
             title={expense.title}
             amount={expense.amount}
