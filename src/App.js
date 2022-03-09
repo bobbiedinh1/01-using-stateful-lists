@@ -45,6 +45,7 @@ const App = () => {
     <div>
       <h2>GitHub Test</h2>
       <h3>stage test2</h3>
+      <h3>branch test</h3>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
